@@ -16,7 +16,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::NewClientConnected(QTcpSocket *client)
 {
-
+    auto id = client->property("id").toInt();
+    ui->lstClients->addItem(QString("New Client added: %1").arg(id));
 }
 
 void MainWindow::ClientDisconnected(QTcpSocket *client)
