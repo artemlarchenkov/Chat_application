@@ -6,10 +6,28 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setupServer();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::NewClientConnected(QTcpSocket *client)
+{
+
+}
+
+void MainWindow::ClientDisconnected(QTcpSocket *client)
+{
+
+}
+
+void MainWindow::setupServer()
+{
+    _server = new ServerManager;
+    connect = (_server, &ServerManager::newClientConnected, this, &MainWindow::NewClientConnected);
+    connect = (_server, &ServerManager::ClientDisconnected, this, &MainWindow::ClientDisconnected);
 }
 
