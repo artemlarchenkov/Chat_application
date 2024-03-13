@@ -16,8 +16,9 @@ public:
     ~ClientChatWidget();
 
 private slots:
-    dataReceived();
-
+    void dataReceived();
+    void on_btnSend_clicked();
+    void clientDisconnected();
 private:
     Ui::ClientChatWidget *ui;
     QTcpSocket * _client;

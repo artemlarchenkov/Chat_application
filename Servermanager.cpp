@@ -19,9 +19,9 @@ void ServerManager::newClientConnectionReceived()
 void ServerManager::onClientDisconnected()
 {
     auto client = qobject_cast<QTcpSocket *>(sender());
-    int id = client->property("id").toInt();
+    //int id = client->property("id").toInt();
     _clients.removeOne(client);
-    emit ClientDisconnected(client);
+    emit clientDisconnected(client);
 }
 
 void ServerManager::setupServer(ushort port)

@@ -46,7 +46,7 @@
         </rect>
        </property>
       </widget>
-      <widget class="QPushButton" name="DisconnectAll">
+      <widget class="QPushButton" name="btnDisconnectAll">
        <property name="geometry">
         <rect>
          <x>40</x>

@@ -17,7 +17,7 @@ private slots:
     void onClientDisconnected();
 signals:
     void newClientConnected(QTcpSocket *client);
-    void ClientDisconnected(QTcpSocket *client);
+    void clientDisconnected(QTcpSocket *client);
 private:
     QTcpServer *_server;
     QList<QTcpSocket *> _clients;

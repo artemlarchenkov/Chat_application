@@ -17,15 +17,12 @@ public:
     ~MainWindow();
 
 private slots:
-
-    void NewClientConnected(QTcpSocket * client);
-    void ClientDisconnected(QTcpSocket * client);
-
+    void newClientConnected(QTcpSocket *client);
+    void clientDisconnected(QTcpSocket *client);
 private:  
     Ui::MainWindow *ui;
     ServerManager *_server;
 private: // methods
-
     void setupServer();
 };
 
